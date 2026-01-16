@@ -6,14 +6,76 @@
     <title>Portofolio Muhammad Andika Arya Putra</title>
 
     <link rel="stylesheet" href="css/style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
 
-    <header></header>
+    <header class="main-header p-[8px]">
+        <div class="logo"></div>
 
-    <main></main>
+        <nav class="flex">
+                <a class="border p-2 rounded" href="#home">Home</a>
+                <a class="border p-2 rounded" href="#portfolio">Portfolio</a>
+                <a class="border p-2 rounded" href="#Our Profile">Our Profile</a>
+                <a class="border p-2 rounded" href="#Message Us">Message Us</a>
+        </nav>
+    </header>
 
-    <footer></footer>
+    <hr/>
+
+    <main>
+        <section id="home" class="min-h-screen flex flex-col justify-center items-center bg-gray-200">
+            <h1 class="text-4xl font-bold mb-4" id="Welcome-speech">Welcome to My Portfolio</h1>
+            <p class="text-lg">Hi, I'm Muhammad Andika Arya Putra. Explore my work and projects below.</p>
+        </section>
+
+        <hr/>
+
+        <section id="portfolio" class="min-h-screen p-8 bg-white">
+            <h2 class="text-3xl font-semibold mb-6">Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Portfolio items go here -->
+            </div>
+        </section>
+
+        <hr/>
+
+        <section id="Our Profile" class="min-h-screen p-8 bg-gray-100">
+            <h2 class="text-3xl font-semibold mb-6">Our Profile</h2>
+            <p class="text-lg">Learn more about me and my background.</p>
+        </section>
+
+        <hr/>
+
+        <section id="Message Us" class="min-h-screen p-8 bg-white">
+            <h2 class="text-3xl font-semibold mb-6">Message Us</h2>
+            <form class="flex flex-col max-w-md mb-8" onsubmit="handleFormSubmit(event)">
+                <input type="text" id="name" placeholder="Your Name" class="mb-4 p-2 border rounded" required/>
+                <input type="email" id="email" placeholder="Your Email" class="mb-4 p-2 border rounded" required/>
+                <textarea id="message" placeholder="Your Message" class="mb-4 p-2 border rounded" required></textarea>
+                <button type="submit" class="p-2 bg-blue-500 text-white rounded">Send Message</button>
+            </form>
+            
+            <h3 class="text-2xl font-semibold mb-4">Messages Received</h3>
+            <table class="w-full border-collapse border border-gray-300">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th class="border border-gray-300 p-2">Name</th>
+                        <th class="border border-gray-300 p-2">Email</th>
+                        <th class="border border-gray-300 p-2">Message</th>
+                    </tr>
+                </thead>
+                <tbody id="messageTable">
+                    <!-- Messages will be added here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p class="text-center p-4 bg-gray-800 text-white">© 2024 Muhammad Andika Arya Putra. All rights reserved.</p>
+    </footer>
     
     <script src="js/script.js"></script>
 </body>
